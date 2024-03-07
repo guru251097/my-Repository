@@ -1,0 +1,32 @@
+package com.example.employee;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	EmployeeService employeeservice;
+	
+	@GetMapping("/getAllEmployee")
+	public List<Employee> getAllEmployee(){
+		return employeeservice.getAllEmployee();
+	}
+	
+	@PostMapping("/createEmployee")
+	public String createEmployee(@RequestBody Employee e) {
+		return employeeservice.createEmployee(e);
+	}
+	
+	@GetMapping("/findOneEmployeeById")
+	public Employee findOneEmployeeById(@RequestBody int id) {
+		return employeeservice.findOneEmployeeById(id);
+	}
+	
+
+}

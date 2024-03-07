@@ -1,0 +1,19 @@
+package com.dealer.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dealer.Dao.DealerDao;
+import com.dealer.Entity.DealerEntity;
+
+@Service
+public class DealerService {
+	@Autowired
+	DealerDao dealerdao;
+	
+	public String updateUserDetails(DealerEntity a) {
+		return dealerdao.updateUserDetails();
+	}
+
+}
+

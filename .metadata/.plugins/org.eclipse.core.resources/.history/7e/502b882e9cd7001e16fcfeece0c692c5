@@ -1,0 +1,25 @@
+package com.dealer.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.dealer.Entity.DealerEntity;
+import com.dealer.Repository.DealerRepository;
+
+@Repository
+public class DealerDao {
+	@Autowired
+	DealerRepository dealerrepository;
+	
+	public String updateUserDetails(DealerEntity d) {
+		dealerrepository.save(d);
+		return "successfully saved";
+	}
+	
+	public String updateMultipleUser(List<DealerEntity> d) {
+		dealerrepository.saveAll(d);
+		return "All User Added";
+	}
+	
+
+}

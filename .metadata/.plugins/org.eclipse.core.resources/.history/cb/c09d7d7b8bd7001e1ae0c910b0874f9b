@@ -1,0 +1,13 @@
+package com.phone.mobile;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+public interface MobileRepository extends JpaRepository<Mobile, Integer>{
+	
+	
+	@Query(value="select * from mobile where price>=? and price<=?",nativeQuery=true)
+	public List<Mobile> getByPrice(int price1,int price2);
+
+}

@@ -1,0 +1,42 @@
+package com.dealer.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dealer.Dao.DealerDao;
+import com.dealer.Entity.DealerEntity;
+
+@Service
+public class DealerService {
+	@Autowired
+	DealerDao dealerdao;
+	
+	public String updateUserDetails(DealerEntity d) {
+		return dealerdao.updateUserDetails(d);
+	}
+	
+	public String updateMultipleUser(List<DealerEntity> d) {
+		return dealerdao.updateMultipleUser(d);
+		
+	}
+
+	public Optional<DealerEntity> findUserById(int id) {
+		
+		return dealerdao.findUserById(id);
+	}
+
+	public List<DealerEntity> findAllUser() {
+		
+		return dealerdao.findAllUser();
+	}
+
+	public List<DealerEntity> getByProduct(String product) {
+		
+		return dealerdao.getByProduct(product);
+	}
+
+}
+

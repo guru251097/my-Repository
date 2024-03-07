@@ -1,0 +1,5 @@
+package com.studentMarkSheet.Service;
+@Service
+public class StudentMarkSheetService {
+
+}

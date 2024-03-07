@@ -1,0 +1,18 @@
+package com.restTemplate.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+@RestController
+public class RestTemplateSample {
+	
+	RestTemplate rest=new RestTemplate();
+	
+	@GetMapping(value="/getNameBySampleProject")
+	public String getNameBySampleProject() {
+		String url="http://localhost:8080/sampleProjectController/getName"
+	}
+	
+	
+
+}

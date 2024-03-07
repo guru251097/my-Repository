@@ -1,0 +1,20 @@
+package com.example.employee;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class EmployeeDao {
+	@Autowired
+	EmployeeRepo employeerepo;
+	
+	public List<Employee> getAllEmployee(){
+		return employeerepo.findAll();
+	}
+	public String createEmployee(Employee e) {
+		return employeerepo.save(e);
+	}
+
+}

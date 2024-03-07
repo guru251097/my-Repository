@@ -1,0 +1,5 @@
+package com.useproduct.Dao;
+
+public class ProductDao {
+
+}

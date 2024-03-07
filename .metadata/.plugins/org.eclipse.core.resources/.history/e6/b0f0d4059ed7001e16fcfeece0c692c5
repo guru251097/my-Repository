@@ -1,0 +1,31 @@
+package com.dealer.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.dealer.Entity.DealerEntity;
+import com.dealer.Service.DealerService;
+
+@RestController
+@RequestMapping(value="/dealerController")
+public class DealerController {
+	@Autowired
+	DealerService dealerservice;
+	
+	@PostMapping(value="/updateUserDetails")
+	public String updateUserDetails(@RequestBody DealerEntity d) {
+		return dealerservice.updateUserDetails(d);
+	}
+	
+	@PostMapping(value="/updateMultipleUser")
+	public String updateMultipleUser(@RequestBody List<DealerEntity> d) {
+		return dealerservice.updateMultipleUser(d);
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.dealer.CustomException;
+
+import javax.naming.NameNotFoundException;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+@RestControllerAdvice
+public class GlobalExceptionHandler {
+	@ExceptionHandler(value=NameNotFoundException.class)
+	public ResponseEntity<Object> noName(NameNotFoundException nn){
+		return ResponseEntity<>(nn.getMessage(),HttpStatus.NOT_FOUND);
+	}
+	
+
+}

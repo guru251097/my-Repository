@@ -1,0 +1,20 @@
+package com.gst.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.gst.Entity.Gst;
+import com.gst.Repository.GstRepository;
+
+@Repository
+public class GstDao {
+	@Autowired
+	GstRepository gstrepository;
+	
+	public String storeGst(Gst g) {
+		gstrepository.save(g);
+		return "success";
+		
+	}
+
+}

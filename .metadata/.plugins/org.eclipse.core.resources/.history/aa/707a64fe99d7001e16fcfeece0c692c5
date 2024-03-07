@@ -1,0 +1,5 @@
+package com.dealer.Repository;
+
+public class DealerRepository extends JpaRepository<DealerEntity,Integer>{
+
+}

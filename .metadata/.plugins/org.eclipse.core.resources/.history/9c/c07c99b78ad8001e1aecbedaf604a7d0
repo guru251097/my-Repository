@@ -1,0 +1,13 @@
+package com.useproduct;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class UseproductApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(UseproductApplication.class, args);
+	}
+
+}

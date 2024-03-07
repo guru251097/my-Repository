@@ -1,0 +1,13 @@
+package com.bank.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bank.Repository.BankRepository;
+
+@Repository
+public class BankDao {
+	@Autowired
+	BankRepository bankrepository;
+
+}

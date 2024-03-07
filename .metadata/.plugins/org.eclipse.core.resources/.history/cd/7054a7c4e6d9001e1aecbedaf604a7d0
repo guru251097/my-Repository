@@ -1,0 +1,14 @@
+package com.student.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.student.Repository.StudentRepository;
+
+@Controller
+public class StudentDao {
+	
+	@Autowired
+	StudentRepository studentrepository;
+
+}

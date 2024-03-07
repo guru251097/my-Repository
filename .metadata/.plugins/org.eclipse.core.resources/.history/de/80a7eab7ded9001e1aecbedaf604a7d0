@@ -1,0 +1,25 @@
+package com.useproduct.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.useproduct.Entity.Product;
+
+@Service
+public class UseProductService {
+	@Autowired
+	RestTemplate resttemplate;
+	
+	public List<Product> getProductWithTax(){
+		String url1="http://localhost:8082/productController/getAllProductData";
+		String url2="http://localhist:8080/gstC";
+		
+	}
+	
+	
+	
+
+}

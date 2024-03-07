@@ -1,0 +1,14 @@
+package com.customer.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.customer.Dao.CustomerDao;
+
+@Service
+public class CustomerService {
+	@Autowired
+	CustomerDao customerdao;
+	
+
+}

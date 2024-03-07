@@ -1,0 +1,21 @@
+package com.phone.mobile;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+
+@Service
+public class MobileService {
+	@Autowired
+	MobileDao mobiledao;
+	public String saveMobileData(Mobile m) {
+		return mobiledao.saveMobileData(m);
+	}
+
+	public String saveAllMobileData(List<Mobile> m) {
+		return mobiledao.saveAllMobileData(m);
+	}
+}
+

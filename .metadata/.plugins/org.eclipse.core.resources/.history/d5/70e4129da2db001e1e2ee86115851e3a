@@ -1,0 +1,14 @@
+package com.bank.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bank.Dao.BankDao;
+
+@Service
+public class BankService {
+	@Autowired
+	BankDao bankdao;
+	
+
+}

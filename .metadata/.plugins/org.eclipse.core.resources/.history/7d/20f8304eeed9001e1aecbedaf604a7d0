@@ -1,0 +1,39 @@
+package com.student.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.Dao.StudentDao;
+import com.student.Entity.Student;
+
+@Service
+public class StudentService {
+	@Autowired
+	StudentDao studentdao;
+
+	public String saveMulStudentDetails(List<Student> s) throws AgeException{
+		for (Student x : s) {
+			if (x.getAge() > 18) {
+				return studentdao.saveMulStudentDetails(s);
+			}else {
+				throw new AgeException("age must be above 18");
+			}
+		}
+		
+	}
+
+	public List<Student> getAllStudentDetails() {
+		return studentdao.getAllStudentDetails();
+	}
+
+	public String updateStudentNameByRollNumber(String name, int no) {
+		return studentdao.updateStudentNameByRollNumber(name, no);
+	}
+
+	public String deleteStudentDetailsByRollNo(int no) {
+		return studentdao.deleteStudentDetailsByRollNo(no);
+	}
+
+}

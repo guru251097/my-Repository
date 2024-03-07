@@ -1,0 +1,18 @@
+package com.customer.Controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.customer.Service.CustomerService;
+
+@RestController
+@RequestMapping(value="/customerController")
+public class CustomerController {
+	@Autowired
+	CustomerService customerservice;
+	
+	
+	
+
+}

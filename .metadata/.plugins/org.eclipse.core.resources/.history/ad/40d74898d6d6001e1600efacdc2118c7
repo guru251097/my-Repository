@@ -1,0 +1,55 @@
+package com.phone.mobile;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+
+@Service
+public class MobileService {
+	@Autowired
+	MobileDao mobiledao;
+	public String saveMobileData(Mobile m) {
+		return mobiledao.saveMobileData(m);
+	}
+
+	public String saveAllMobileData(List<Mobile> m) {
+		return mobiledao.saveAllMobileData(m);
+	}
+
+	public List<Mobile> findAllMobileData() {
+		return mobiledao.findAllMobileData();
+	}
+
+	public Optional<Mobile> findMobileDataById(int a) {		
+		return mobiledao.findMobileDataById(a);
+	}
+
+	public String deleteMobileDataById(int a) {
+		
+		return mobiledao.deleteMobileDataById(a);
+	}
+
+	public List<Integer> getDiscountPrice() {
+		List<Mobile> allDetails=mobiledao.findAllMobileData();
+		List<Integer> discountValues=allDetails.stream().map(x->(x.getPrice()-x.getPrice()*x.getDiscount()/100)).collect(Collectors.toList());
+		return discountValues;
+	}
+
+	public List<String> getUniqueBrandName() {
+		List<Mobile> allDetails=mobiledao.findAllMobileData();
+		List<String> uniqueBrand=allDetails.stream().map(x->x.getBrandname()).distinct().collect(Collectors.toList());
+		return uniqueBrand;
+	}
+
+	public Mobile secondHighestPrice() {
+		List<Mobile> allDetails=mobiledao.findAllMobileData();
+		return null;
+	}
+	
+	
+}
+

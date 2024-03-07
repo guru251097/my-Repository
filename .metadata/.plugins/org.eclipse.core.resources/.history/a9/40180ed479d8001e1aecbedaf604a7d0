@@ -1,0 +1,11 @@
+package com.gst.Repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.gst.Entity.Gst;
+
+public interface GstRepository extends JpaRepository<Gst, Integer>{
+	
+	@Query(value="select tax_percentage from gst where hsn=?",nativequery=true)
+
+}

@@ -1,0 +1,5 @@
+package com.dealer.CustomException;
+
+public class IdNotFoundException {
+
+}

@@ -1,0 +1,22 @@
+package dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.phone.mobile.Mobile;
+
+import repository.MobileRepository;
+
+@Repository
+public class MobileDao {
+	@Autowired
+	MobileRepository mobilerepository;
+	
+	public String saveMobileData(Mobile m) {
+		mobilerepository.save(m);
+		return "Saved Successfully";
+	}
+	
+	
+
+}

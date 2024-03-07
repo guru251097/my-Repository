@@ -1,0 +1,20 @@
+package com.studentMarkSheet.Service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.studentMarkSheet.Dao.StudentMarkSheetDao;
+import com.studentMarkSheet.Entity.Student;
+
+@Service
+public class StudentMarkSheetService {
+	
+	@Autowired
+	StudentMarkSheetDao studentmarksheetdao;
+	
+	public Student saveSemesterMark(Student s) {
+		return studentmarksheetdao.saveSemesterMark(s);
+	}
+	
+
+}

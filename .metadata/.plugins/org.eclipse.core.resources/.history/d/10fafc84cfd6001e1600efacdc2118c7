@@ -1,0 +1,30 @@
+package com.phone.mobile;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class MobileController {
+	@Autowired
+	MobileService mobileservice;
+	
+	@PostMapping("/saveMobileData")
+	public String saveMobileData(@RequestBody Mobile m) {
+		return mobileservice.saveMobileData(m);
+		
+	}
+	
+	@PostMapping("/saveAllMobileData")
+	public String saveAllMobileData(@RequestBody List<Mobile> m) {
+		return mobileservice.saveAllMobileData(m);
+	}
+	
+	@PostMapping("/findAllMobileData")
+	public List<Mobile> findAllMobileData(){
+		return mobileservice.findAllMobileData();
+	}
+
+}

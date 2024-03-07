@@ -1,0 +1,15 @@
+package com.example.employee;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeService {
+	@Autowired
+	EmployeeDao employeedao;
+	
+	public List<Employee> getAllEmployee(){
+		return employeedao.getAllEmployee();
+	}
+	
+
+}

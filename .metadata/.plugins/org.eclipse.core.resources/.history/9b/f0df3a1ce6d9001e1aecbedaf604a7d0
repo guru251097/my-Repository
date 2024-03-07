@@ -1,0 +1,8 @@
+package com.student.Dao;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class StudentDao {
+
+}

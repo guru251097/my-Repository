@@ -1,0 +1,6 @@
+package com.customer.Controller;
+@RestController
+@RequestMapping(value="/customerController")
+public class CustomerController {
+
+}

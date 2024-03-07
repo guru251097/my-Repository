@@ -1,0 +1,5 @@
+package com.gst.Repository;
+
+public interface GstRepository {
+
+}

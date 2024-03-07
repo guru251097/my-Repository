@@ -1,0 +1,5 @@
+package com.useproduct.Entity;
+
+public class Product {
+
+}

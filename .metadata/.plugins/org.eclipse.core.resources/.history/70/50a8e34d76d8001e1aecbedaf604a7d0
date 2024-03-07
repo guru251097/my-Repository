@@ -1,0 +1,7 @@
+package com.gst.Controller;
+@RestController
+@RequestMapping(value="/gstController")
+public class GstController {
+	@
+
+}

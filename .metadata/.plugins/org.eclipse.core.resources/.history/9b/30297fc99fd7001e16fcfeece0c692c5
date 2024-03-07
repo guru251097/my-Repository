@@ -1,0 +1,8 @@
+package com.dealer.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.dealer.Entity.DealerEntity;
+
+public interface DealerRepository extends JpaRepository<DealerEntity,Integer>{
+		
+
+}

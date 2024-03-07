@@ -1,0 +1,18 @@
+package com.phone.mobile;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.phone.mobile.Mobile;
+
+import dao.MobileDao;
+
+@Service
+public class MobileService {
+	@Autowired
+	MobileDao mobiledao;
+	public String saveMobileData(Mobile m) {
+		return mobiledao.saveMobileData(m);
+	}
+
+}
+

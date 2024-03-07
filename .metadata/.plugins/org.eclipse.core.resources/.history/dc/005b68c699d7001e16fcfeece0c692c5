@@ -1,0 +1,15 @@
+package com.dealer.Dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.dealer.Repository.DealerRepository;
+
+@Repository
+public class DealerDao {
+	@Autowired
+	DealerRepository dealerrepository;
+	
+	
+
+}
